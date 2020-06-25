@@ -50,6 +50,8 @@ services:
 #      LOGSDB_ENABLED: "true"
     volumes:
       - df-storage:/opt/dreamfactory/storage
+      - /etc/openldap/:/etc/openldap/
+      - /apps/df-docker-tsar/shared/:/opt/dreamfactory/shared/
     build: .
     ports:
       - "80:80"
