@@ -1,0 +1,52 @@
+{
+    "name": "graham-campbell/bitbucket",
+    "description": "Bitbucket Is A Bitbucket Bridge For Laravel",
+    "keywords": ["laravel", "framework", "bitbucket", "php-bitbucket-api", "PHP Bitbucket API", "bitbucket bridge", "bridge", "Bitbucket", "Laravel Bitbucket", "Laravel-Bitbucket", "Graham Campbell", "GrahamCampbell"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Graham Campbell",
+            "email": "graham@alt-three.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/contracts": "^5.5|^6.0|^7.0",
+        "illuminate/support": "^5.5|^6.0|^7.0",
+        "graham-campbell/manager": "^4.4",
+        "bitbucket/client": "2.1.*",
+        "symfony/cache": "^3.3|^4.0|^5.0"
+    },
+    "require-dev": {
+        "graham-campbell/analyzer": "^2.4",
+        "graham-campbell/testbench": "^5.4",
+        "mockery/mockery": "^1.3.1",
+        "phpunit/phpunit": "^6.5|^7.0|^8.0",
+        "php-http/guzzle6-adapter": "^1.1|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GrahamCampbell\\Bitbucket\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GrahamCampbell\\Tests\\Bitbucket\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.5-dev"
+        },
+        "laravel": {
+            "providers": [
+                "GrahamCampbell\\Bitbucket\\BitbucketServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

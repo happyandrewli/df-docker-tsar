@@ -1,0 +1,53 @@
+{
+  "name":        "dreamfactory/df-sqlsrv",
+  "description": "The DreamFactory(tm) SQL Server DB Service.",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "sql server",
+    "sqlsrv",
+    "sql",
+    "database",
+    "db"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-sqlsrv",
+    "issues": "https://github.com/dreamfactorysoftware/df-sqlsrv/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "leaseweb/doctrine-pdo-dblib": "~1.1.0",
+    "dreamfactory/df-sqldb":       "~0.17"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\SqlSrv\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.15.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\SqlSrv\\ServiceProvider"
+      ]
+    }
+  }
+}

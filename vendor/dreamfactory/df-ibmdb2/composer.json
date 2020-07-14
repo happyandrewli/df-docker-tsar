@@ -1,0 +1,51 @@
+{
+  "name":        "dreamfactory/df-ibmdb2",
+  "description": "The DreamFactory(tm) IBM DB2 Service.",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "ibm db2",
+    "sql",
+    "database",
+    "db"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-ibmdb2",
+    "issues": "https://github.com/dreamfactorysoftware/df-ibmdb2/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-sqldb": "~0.17.2"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\IbmDb2\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.15.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\IbmDb2\\ServiceProvider"
+      ]
+    }
+  }
+}

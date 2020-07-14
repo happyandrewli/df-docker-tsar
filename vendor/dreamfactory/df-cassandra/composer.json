@@ -1,0 +1,50 @@
+{
+  "name":        "dreamfactory/df-cassandra",
+  "description": "Cassandra database service for DreamFactory Platform 2.0",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "database",
+    "NoSql",
+    "Cassandra"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "Apache-2.0",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-cassandra",
+    "issues": "https://github.com/dreamfactorysoftware/df-cassandra/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable":     true,
+  "require":     {
+    "dreamfactory/df-database": "~0.11"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\Cassandra\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.12.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\Cassandra\\ServiceProvider"
+      ]
+    }
+  }
+}

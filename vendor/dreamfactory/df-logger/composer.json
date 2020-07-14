@@ -1,0 +1,53 @@
+{
+  "name":        "dreamfactory/df-logger",
+  "description": "Logging service for DreamFactory Platform 2.0",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "log",
+    "logger",
+    "elk",
+    "logstash",
+    "elasticsearch",
+    "kibana"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-logger",
+    "issues": "https://github.com/dreamfactorysoftware/df-logger/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-core": "~0.21"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\Logger\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.11.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\Logger\\ServiceProvider"
+      ]
+    }
+  }
+}

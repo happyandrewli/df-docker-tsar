@@ -1,0 +1,58 @@
+{
+  "name":        "dreamfactory/df-git",
+  "description": "Git services for DreamFactory Platform 2.0",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "git",
+    "github",
+    "gitlab",
+    "version",
+    "scm",
+    "source",
+    "version"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-git",
+    "issues": "https://github.com/dreamfactorysoftware/df-git/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable":     true,
+  "require":     {
+    "dreamfactory/df-core": "~0.21",
+    "graham-campbell/github": "^7.5|^8.2",
+    "graham-campbell/gitlab": "^1.7.0|^2.2",
+    "graham-campbell/bitbucket": "^4.2|^5.2",
+    "php-http/guzzle6-adapter": "^1.1"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\Git\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.3.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\Git\\ServiceProvider"
+      ]
+    }
+  }
+}

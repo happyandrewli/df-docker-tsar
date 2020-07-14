@@ -1,0 +1,56 @@
+{
+    "name": "dreamfactory/df-graphql",
+    "description": "GraphQL for DreamFactory",
+    "keywords": ["dreamfactory", "laravel", "graphql", "react"],
+    "authors": [
+        {
+            "name": "Lee Hicks",
+            "email": "leehicks@dreamfactory.com"
+        }
+    ],
+    "support":     {
+        "email":  "dspsupport@dreamfactory.com",
+        "source": "https://github.com/dreamfactorysoftware/df-graphql",
+        "issues": "https://github.com/dreamfactorysoftware/df-graphql/issues",
+        "wiki":   "https://wiki.dreamfactory.com"
+    },
+    "license": "MIT",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable":     true,
+    "require": {
+        "php": ">=5.5.9",
+        "dreamfactory/df-core": "~0.21",
+        "illuminate/support": "^6.13",
+        "webonyx/graphql-php": "~0.10.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.0",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "^1.3",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DreamFactory\\Core\\GraphQL\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "DreamFactory\\Core\\GraphQL\\ServiceProvider"
+            ],
+            "aliases": {
+                "GraphQL": "DreamFactory\\Core\\GraphQL\\Facades\\GraphQL"
+            }
+        }
+    }
+}

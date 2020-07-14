@@ -1,0 +1,49 @@
+{
+  "name":        "dreamfactory/df-adldap",
+  "description": "Active Directory & LDAP support for DreamFactory Platform 2.0",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "ad",
+    "ldap"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-adldap",
+    "issues": "https://github.com/dreamfactorysoftware/df-adldap/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-core": "~0.21"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\ADLdap\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.14.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\ADLdap\\ServiceProvider"
+      ]
+    }
+  }
+}

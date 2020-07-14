@@ -1,0 +1,51 @@
+{
+  "name":        "dreamfactory/df-salesforce",
+  "description": "The DreamFactory(tm) Salesforce Service.",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "salesforce",
+    "database",
+    "db"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-salesforce",
+    "issues": "https://github.com/dreamfactorysoftware/df-salesforce/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-database":      "~0.11",
+    "socialiteproviders/salesforce": "^2.0|^3.0"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\Salesforce\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.15.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\Salesforce\\ServiceProvider"
+      ]
+    }
+  }
+}

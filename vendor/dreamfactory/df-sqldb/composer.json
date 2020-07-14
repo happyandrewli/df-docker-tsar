@@ -1,0 +1,54 @@
+{
+  "name":        "dreamfactory/df-sqldb",
+  "description": "The DreamFactory(tm) SQL DB Service.",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "postgresql",
+    "sqlserver",
+    "ibm db2",
+    "oracle",
+    "sql",
+    "database",
+    "db"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "Apache-2.0",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-sqldb",
+    "issues": "https://github.com/dreamfactorysoftware/df-sqldb/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable":     true,
+  "require":     {
+    "dreamfactory/df-database": "~0.11"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\SqlDb\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.15.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\SqlDb\\ServiceProvider"
+      ]
+    }
+  }
+}

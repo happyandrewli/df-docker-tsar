@@ -1,0 +1,53 @@
+{
+  "name":        "dreamfactory/df-mqtt",
+  "description": "MQTT client service for DreamFactory",
+  "keywords":    [
+    "dreamfactory",
+    "dsp",
+    "rest",
+    "iot",
+    "mqtt",
+    "mosquitto",
+    "rabbitmq"
+  ],
+  "homepage":    "https://github.com/dreamfactorysoftware/df-mqtt",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-mqtt",
+    "issues": "https://github.com/dreamfactorysoftware/df-mqtt/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "https://github.com/dreamfactorysoftware/df-pubsub"
+    }
+  ],
+  "require":     {
+    "dreamfactory/df-pubsub": "~0.2"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\MQTT\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.4.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\MQTT\\ServiceProvider"
+      ]
+    }
+  }
+}

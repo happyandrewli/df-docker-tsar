@@ -1,0 +1,49 @@
+{
+  "name":        "dreamfactory/df-scheduler",
+  "description": "DreamFactory(tm) Scheduler Code",
+  "homepage":    "https://www.dreamfactory.com/",
+  "keywords":    [
+    "dreamfactory",
+    "schedule",
+    "scheduler"
+  ],
+  "license":     [
+    "Apache-2.0"
+  ],
+  "authors":     [
+    {
+      "name":  "Yaroslav Mokhurenko",
+      "email": "yaroslavm@softwareplanet.uk.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-scheduler",
+    "issues": "https://github.com/dreamfactorysoftware/df-scheduler/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-core":   "~0.21",
+    "dreamfactory/df-system": "~0.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\Scheduler\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.1.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\Scheduler\\ServiceProvider"
+      ]
+    }
+  }
+}

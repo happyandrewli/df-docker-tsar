@@ -1,0 +1,54 @@
+{
+  "name":        "dreamfactory/df-notification",
+  "description": "iOS and GCM push notification support for DreamFactory",
+  "keywords":    [
+    "dreamfactory",
+    "iOS",
+    "APNS",
+    "android",
+    "google",
+    "GCM",
+    "push",
+    "notification",
+    "apple"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-notification",
+    "issues": "https://github.com/dreamfactorysoftware/df-notification/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-core": "~0.21",
+    "sly/notification-pusher": "~2.0"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\Notification\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.7.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\Notification\\ServiceProvider"
+      ]
+    }
+  }
+}

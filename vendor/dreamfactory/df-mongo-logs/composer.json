@@ -1,0 +1,56 @@
+{
+  "name": "dreamfactory/df-mongo-logs",
+  "description": "DreamFactory(tm) MongoDB Logger Package",
+  "homepage": "https://www.dreamfactory.com/",
+  "keywords": [
+    "dreamfactory",
+    "logs",
+    "mongodb"
+  ],
+  "license": [
+    "Apache-2.0"
+  ],
+  "authors": [
+    {
+      "name":  "DreamFactory Team",
+      "email": "code@dreamfactory.com"
+    }
+  ],
+  "support": {
+    "email": "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-skeleton",
+    "issues": "https://github.com/dreamfactorysoftware/df-skeleton/issues",
+    "wiki": "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "dreamfactory/df-core": "~0.22",
+    "jenssegers/mongodb": "~3.6.3",
+    "spatie/laravel-http-logger": "^1.1",
+    "ext-json": "*",
+    "ext-mongodb": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable",
+    "filp/whoops": "~2.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/Utility"
+    ],
+    "psr-4": {
+      "DreamFactory\\Core\\MongoLogs\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "0.1.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\MongoLogs\\ServiceProvider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name":        "dreamfactory/df-azure-ad",
+  "description": "Azure Active Directory support for DreamFactory Platform 2.0",
+  "keywords":    [
+    "dreamfactory",
+    "api",
+    "rest",
+    "ad",
+    "azure",
+    "active",
+    "directory"
+  ],
+  "homepage":    "https://www.dreamfactory.com/",
+  "license":     "proprietary",
+  "authors":     [
+    {
+      "name":  "Arif Islam",
+      "email": "arifislam@dreamfactory.com"
+    },
+    {
+      "name":  "Lee Hicks",
+      "email": "leehicks@dreamfactory.com"
+    }
+  ],
+  "support":     {
+    "email":  "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-azure-ad",
+    "issues": "https://github.com/dreamfactorysoftware/df-azure-ad/issues",
+    "wiki":   "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require":     {
+    "dreamfactory/df-oauth": "~0.15"
+  },
+  "autoload":    {
+    "psr-4": {
+      "DreamFactory\\Core\\AzureAD\\": "src/"
+    }
+  },
+  "extra":       {
+    "branch-alias": {
+      "dev-develop": "0.8.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\AzureAD\\ServiceProvider"
+      ]
+    }
+  }
+}
