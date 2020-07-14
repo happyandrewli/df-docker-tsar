@@ -1,0 +1,37 @@
+{
+    "name":              "dreamfactory/df-filemanager-app",
+    "type":              "dreamfactory-app",
+    "description":       "DreamFactory(tm) File Manager",
+    "homepage":          "https://github.com/dreamfactorysoftware/df-filemanager-app/",
+    "keywords":          [
+        "rest",
+        "api",
+        "file manager",
+        "dreamfactory"
+    ],
+    "license":           ["Apache-2.0"],
+    "authors":           [
+        {
+            "name":  "DreamFactory Software, Inc.",
+            "email": "dspsupport@dreamfactory.com",
+            "role":  "Developer"
+        }
+    ],
+    "support":           {
+        "source": "https://github.com/dreamfactorysoftware/df-filemanager-app",
+        "issues": "https://github.com/dreamfactorysoftware/df-filemanager-app/issues",
+        "email":  "dspsupport@dreamfactory.com",
+        "wiki":   "https://wiki.dreamfactory.com"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable":     true,
+    "require":           {
+        "dreamfactory/installer": "*"
+    },
+    "extra":             {
+        "branch-alias":   {
+            "dev-develop": "0.3.x-dev"
+        },
+        "installer-name": "filemanager"
+    }
+}

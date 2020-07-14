@@ -1,0 +1,35 @@
+// position main menu relative to button
+
+.dropdown-submenu {
+
+  position:relative;
+}
+
+// position submenu relative to main menu item
+
+.dropdown-submenu .dropdown-menu {
+
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+// 2 columns are used if more than X items in list
+
+.dropdown-submenu .dropdown-menu-2 {
+
+  width: 422px;
+}
+
+.dropdown-submenu .dropdown-menu-2 li {
+
+  width: 210px;
+  float: left;
+}
+
+// show submenu when hovering on main menu item
+
+.dropdown-submenu:hover>.dropdown-menu {
+
+  display:inline-block;
+}

@@ -1,0 +1,42 @@
+// to change the theme you need to replace all occurrences of the theme name in this file
+
+// theme variable overrides, these allow variable overrides on a specific theme
+@import "partials/themes/matan-light/_variable_overrides.scss";
+
+// theme variables, do not change this file
+@import "partials/themes/matan-light/_variables.scss";
+
+// standard bootstrap, do not change this file
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// theme bootswatch, do not change this file
+@import "partials/themes/matan-light/_bootswatch.scss";
+
+// theme bootswatch overrides, these allow bootswatch overrides on a specific theme
+@import "partials/themes/matan-light/_bootswatch_overrides.scss";
+
+// needed for filter gradient
+@import "compass";
+
+
+@import "font-awesome.min.css";
+@import "lato.css";
+
+// Custom DreamFactory SCSS
+@import "partials/_base.scss";
+@import "partials/_df-remote-login-providers.scss";
+@import "partials/_df-auth-module.scss";
+@import "partials/_df-top-level-nav-std.scss";
+@import "partials/_df-component-nav.scss";
+@import "partials/_df-sidebar-nav.scss";
+@import "partials/_df-launchpad.scss";
+@import "partials/_df-help.scss";
+@import "partials/_df-scripting.scss";
+@import "partials/_df-dropdown-submenu.scss";
+@import "partials/_df-event-picker.scss";
+@import "partials/df-license-expired-banner";
+@import "../../admin_components/adf-help/styles/style.scss";
+
+[data-ng-click] {
+  cursor: pointer;
+}

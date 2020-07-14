@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>DreamFactory</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+      <!-- build:css({.tmp,app}) styles/styles.css -->
+      <link rel="stylesheet" href="styles/sass/styles.css" />
+      <link rel="stylesheet" href="../bower_components/pnotify/dist/pnotify.css" />
+      <link rel="stylesheet" href="../bower_components/pnotify/dist/pnotify.buttons.css" />
+      <!-- endbuild -->
+
+  </head>
+  <body ng-app="dreamfactoryApp">
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="dreamfactoryApp" data-ng-controller="MainCtrl" df-popup-login>
+        <div id="popup-login-container"></div>
+
+        <!-- Top level Nav -->
+       <df-top-level-nav-std data-ng-if="showHeader" data-options="topLevelNavOptions"></df-top-level-nav-std>
+
+       <df-license-expired-banner data-ng-if="showLicenseExpiredBanner"></df-license-expired-banner>
+
+        <div data-ng-if="showAdminComponentNav" style="margin: 10px auto;" class="df-menu">
+            <!-- Component nav and title -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-md-2 df-menu-container df-menu-icon">
+                            <df-component-title></df-component-title>
+                        </div>
+                        <div class="col-md-10 df-menu-container second-nav-menu-items">
+                            <df-component-nav data-options="componentNavOptions"></df-component-nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rendering Context -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div data-ng-view=""></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<df-main-loading></df-main-loading>-->
+        <div id="mask"></div>
+    </div>
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="../bower_components/es5-shim/es5-shim.js"></script>
+    <script src="../bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/json3/lib/json3.js"></script>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.animate.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.buttons.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.callbacks.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.confirm.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.desktop.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.history.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.mobile.js"></script>
+        <script src="bower_components/pnotify/dist/pnotify.nonblock.js"></script>
+        <script src="bower_components/angular-ui-ace/ui-ace.js"></script>
+        <script src="bower_components/clipboard/dist/clipboard.js"></script>
+        <script src="bower_components/ngclipboard/dist/ngclipboard.js"></script>
+        <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/app.js -->
+    <script src="admin_components/adf-user-management/dreamfactory-user-management.js"></script>
+    <script src="admin_components/adf-utility/dreamfactory-utility.js"></script>
+    <script src="admin_components/adf-system-config/dreamfactory-system-config.js"></script>
+    <script src="admin_components/adf-admins/dreamfactory-admins.js"></script>
+    <script src="admin_components/adf-users/dreamfactory-users.js"></script>
+    <script src="admin_components/adf-apps/dreamfactory-apps.js"></script>
+    <script src="admin_components/adf-data/dreamfactory-data.js"></script>
+    <script src="admin_components/adf-services/dreamfactory-services.js"></script>
+    <script src="admin_components/adf-roles/dreamfactory-roles.js"></script>
+    <script src="admin_components/adf-schema/dreamfactory-schema.js"></script>
+    <script src="admin_components/adf-scripts/dreamfactory-scripts.js"></script>
+    <script src="admin_components/adf-profile/dreamfactory-profile.js"></script>
+    <script src="admin_components/adf-application/dreamfactory-application.js"></script>
+    <script src="admin_components/adf-help/dreamfactory-help.js"></script>
+    <script src="admin_components/adf-launchpad/dreamfactory-launchpad.js"></script>
+    <script src="admin_components/adf-apidocs/dreamfactory-apidocs.js"></script>
+    <script src="admin_components/adf-file-manager/dreamfactory-file-manager.js"></script>
+    <script src="admin_components/adf-package-manager/dreamfactory-package-manager.js"></script>
+    <script src="admin_components/adf-table/dreamfactory-table.js"></script>
+    <script src="admin_components/adf-home/dreamfactory-home.js"></script>
+    <script src="admin_components/adf-limit/dreamfactory-limit.js"></script>
+    <script src="admin_components/adf-license-expired/license-expiry-banner/license-expired-banner.directive.js"></script>
+    <script src="admin_components/adf-license-expired/license-expired.config.js"></script>
+    <script src="admin_components/adf-reports/dreamfactory-reports.js"></script>
+    <script src="admin_components/adf-scheduler/dreamfactory-scheduler.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/polyfill.js"></script>
+    <script src="services/license-data.service.js"></script>
+    <!-- endbuild -->
+
+    <!-- other deps -->
+    <script src="vendor/ace/ace.js"></script>
+    <script src="vendor/ace/mode-javascript.js"></script>
+    <script src="vendor/ace/mode-json.js"></script>
+    <script src="vendor/ace/mode-yaml.js"></script>
+
+<script>
+  setTimeout(function(){
+
+      var _updateIntercom = function(userData) {
+          var host = $body.injector().get("$location").host();
+
+          var intercomData = {
+              email: userData.email,
+              name: userData.name,
+              firstName: userData.first_name,
+              lastName: userData.last_name,
+              host: host,
+          }
+
+          window.Intercom('update', intercomData);
+      }
+
+      var $body = angular.element(document.body),
+          es = $body.injector().get("UserEventsService").login,
+          $rootScope = $body.scope().$root
+
+      // Handle a case when user has logged in and so update the widget with user data
+      $rootScope.$on(es.loginSuccess, function (e, userData) {
+          _updateIntercom(userData);
+      });
+
+      // Handle a case when user is not logged in. Just show the widget
+      window.Intercom('boot', {
+          app_id: "ymvqkyiw",
+      });
+
+      // Handle a case when user is logged in and reloads the page
+      var currentUser = $body.injector().get("UserDataService").getCurrentUser();
+      if (currentUser) {
+          _updateIntercom(currentUser);
+      }
+  }, 1000)
+
+
+</script>
+
+<script>
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ymvqkyiw';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+
+  </body>
+</html>

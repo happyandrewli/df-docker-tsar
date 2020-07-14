@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html data-ng-app="FileManagerApp">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Standard CSS -->
+	<link rel="stylesheet" href="themes/df-default/jquery-ui-1.9.1.custom.css" type="text/css" />
+	<link rel="stylesheet" href="css/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="css/base.css" type="text/css"/>
+    <!--link rel="stylesheet" href="static/bootswatch/paper/bootstrap.min.css" /-->
+
+    <link rel="stylesheet" href="static/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/bootstrap/3.3.6//bootstrap.css">
+
+    <!-- Something trying to ref the script when loading html
+    so I put this here -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <!-- DF Imports -->
+    <script src="js/df.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-translate.min.js"></script>
+    <script src="js/angular-cookies.min.js"></script>
+    <script src="static/bootstrap/3.3.6/bootstrap.js"></script>
+    <script src="js/polyfill.js"></script>
+
+    <!-- uncomment these to use source -->
+    <script src="js/angular-filemanager/src/js/app.js"></script>
+    <script src="js/angular-filemanager/src/js/directives/directives.js"></script>
+    <script src="js/angular-filemanager/src/js/filters/filters.js"></script>
+    <script src="js/angular-filemanager/src/js/providers/config.js"></script>
+    <script src="js/angular-filemanager/src/js/entities/chmod.js"></script>
+    <script src="js/angular-filemanager/src/js/entities/item.js"></script>
+    <script src="js/angular-filemanager/src/js/services/filenavigator.js"></script>
+    <script src="js/angular-filemanager/src/js/services/fileuploader.js"></script>
+    <script src="js/angular-filemanager/src/js/providers/translations.js"></script>
+    <script src="js/angular-filemanager/src/js/controllers/main.js"></script>
+    <script src="js/angular-filemanager/src/js/controllers/selector-controller.js"></script>
+
+    <!-- DF FileManager -->
+    <script src="js/filemanagement.js"></script>
+
+</head>
+<body>
+<div id="fileModal" class="modal hide fade in" style="display: none; ">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+
+        <h3>Upload File</h3>
+    </div>
+    <div class="modal-body">
+        <div class="alert">Use the controls below to upload a file to the application.</div>
+        <p>
+
+        <div class="btn-group" data-toggle="buttons-radio">
+            <a  type="button" id="file-btn" class="btn btn-primary" name="File"
+               onclick="setMode('file')">File</a>
+            <a  type="button" id="url-btn" class="btn" name="URL" onclick="setMode('url');">URL</a>
+        </div>
+        </p>
+        <p>
+
+        <form id="fileImportForm" method="POST" enctype="multipart/form-data" target="fileIframe">
+            <input id="fileInput" type="file" name="files" size="50"/>
+        </form>
+        <iframe id="fileIframe" style="display: none;" name="fileIframe" src="about:blank" onload="checkResults(this)"></iframe>
+        <div id="errorDialog" style="display: none;" title="Oops! An Error Has Occured..." class="cTxtLeft">
+            <p class="ui-state-error ui-corner-all cP1">
+                <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+                <span id="errorMsg"><!--  --></span>
+            </p>
+        </div>
+        </p>
+        <p>
+            <input id="urlImportText" style="display: none;" type="text" class="input-xlarge" placeholder="Enter a url"
+                   value="">
+        </p>
+
+        <p>
+            <input id="importExtract" type="checkbox">Extract ZIP files</input>
+        </p>
+
+        <p>
+            <input id="importReplace" type="checkbox">Delete existing folder contents before extracting</input>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a  class="btn" data-dismiss="modal">Cancel</a>
+        <a  class="btn btn-primary" onclick="importFile()">Import</a>
+    </div>
+</div>
+<div id="" align="left">
+    <div id="">
+        <div align="left">
+            <angular-filemanager></angular-filemanager>
+        </div>
+        <div class=""></div>
+    </div>
+</div>
+
+</body>
+</html>

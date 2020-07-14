@@ -1,0 +1,39 @@
+{
+    "name":              "dreamfactory/df-admin-app",
+    "type":              "dreamfactory-app",
+    "description":       "DreamFactory(tm) Admin Console",
+    "homepage":          "https://github.com/dreamfactorysoftware/df-admin-app/",
+    "keywords":          [
+        "rest",
+        "api",
+        "remote web services",
+        "dreamfactory",
+        "api",
+        "service bus",
+        "esb",
+        "admin"
+    ],
+    "license":           ["Apache-2.0"],
+    "authors":           [
+        {
+            "name":  "DreamFactory Dev Team",
+            "email": "dspsupport@dreamfactory.com",
+            "role":  "Development team"
+        }
+    ],
+    "support":           {
+        "source": "https://github.com/dreamfactorysoftware/df-admin-app",
+        "issues": "https://github.com/dreamfactorysoftware/df-admin-app/issues",
+        "email":  "dspsupport@dreamfactory.com",
+        "wiki":   "https://wiki.dreamfactory.com"
+    },
+    "require":           {
+        "dreamfactory/installer": "*"
+    },
+    "extra":             {
+        "branch-alias":   {
+            "dev-develop": "2.16.x-dev"
+        },
+        "installer-name": "dreamfactory"
+    }
+}

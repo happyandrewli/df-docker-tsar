@@ -1,0 +1,52 @@
+
+.df-top-navbar {
+
+  margin-bottom: 0;
+  border: none;
+
+
+  .navbar-brand {
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 15px!important;
+    }
+
+    padding-top: 4px;
+  }
+
+
+  .df-navbar-nav {
+
+    .notification-item:hover {
+      text-decoration: underline;
+    }
+
+    .notification-item {
+      border-bottom: 1px solid #999999;;
+    }
+
+    .notification-item:last-child {
+      border-bottom: none;
+    }
+
+    .notify:after{
+      position: absolute;
+      top: 21%;
+      content: '';
+      padding: .25em;
+      border-radius: 50%;
+      background: red;
+    }
+
+    li {
+
+      a {}
+    }
+
+
+    li:hover {
+
+      a {}
+    }
+  }
+}
